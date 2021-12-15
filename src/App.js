@@ -9,10 +9,12 @@ import AddFriend from './components/AddFriend';
 function App() {
   return (
     <div className="App">
-      <h3> Links </h3>
-      <Link to='/friends/add'>Add a friend</Link>
-      <Link to='/'>Login</Link>
-    
+      <header>
+        <Link className='link' to='/friends/add'>Add a friend</Link>
+        <Link className='link' to='/friends'> Friends</Link>
+        <Link className='link' to='/'>Login</Link>
+      </header>
+
       <Switch>
         <Route path='/logout' />
         <Route path='/friends/add' component={AddFriend}/>

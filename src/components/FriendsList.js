@@ -1,13 +1,8 @@
 import axios from "axios";
-import React, { useEffect } from "react";
-
-
-const friends = {
-    name: 'Name',
-    email: 'mom@mom.com'
-}
+import React, { useEffect, useState } from "react";
 
 const FriendsList = () => {
+    const [friends, setFriends] = useState([]);
 
     useEffect(() => {
         const token = localStorage.getItem('token')
@@ -17,7 +12,7 @@ const FriendsList = () => {
             }
         })
             .then(res => {
-                console.log(res)
+               setFriends(res.data)
             })
             .catch(err => {
                 console.error(err)
@@ -27,7 +22,11 @@ const FriendsList = () => {
     return(
         <div className="friendslist">
            <h1> Friends </h1>
-           <h3> - {friends.name} - {friends.email} </h3>
+        {   
+            friends.map( friends => {
+               return ( <h3 key={friends.id}> - {friends.name} - {friends.age} - {friends.email} </h3>)
+           })
+         }
         </div>
     )
 }

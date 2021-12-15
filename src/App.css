@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.link {
+  padding: 5% 2% 2% 4%;
+  background-color: black;
+  color:white;
+  text-decoration: white;
+  font-size: 3rem;
+}
+
+.login {
+  margin: 5%;
+  padding: 3%;
+}
+
+.login input{
+  margin: 1%;
+}
+
+.friendslist{
+  margin: 3%;
+}

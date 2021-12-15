@@ -6,9 +6,9 @@ const Login = () => {
     const [credentials, setCredentials] = useState({
         username: '',
         password: ''
-    })
+    });
 
-    const { push } = useHistory()
+    const { push } = useHistory();
 
     const handleChange = e => {
         setCredentials({
@@ -40,20 +40,24 @@ const Login = () => {
         <div className="login">
             <h1> Login </h1>
             <form onSubmit={handleSubmit}>
-                <label>USERNAME</label>
-                <input 
-                 type='text'
-                 name='username'
-                 value={credentials.username}
-                 onChange={handleChange}
-                 />
-                <label>PASSWORD</label>
-                <input
-                 type='password'
-                 name='password'
-                 value={credentials.password}
-                 onChange={handleChange}
-                />
+                <div>
+                    <label htmlFor="username">USERNAME:</label>
+                    <input 
+                    type='text'
+                    name='username'
+                    value={credentials.username}
+                    onChange={handleChange}
+                    />
+                </div>
+                <div>
+                <label htmlFor="password">PASSWORD:</label>
+                    <input
+                    type='password'
+                    name='password'
+                    value={credentials.password}
+                    onChange={handleChange}
+                    />
+                </div>
                 <button>Submit</button>
             </form>
         </div>
