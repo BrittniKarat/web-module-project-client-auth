@@ -7,11 +7,7 @@ const FriendsList = () => {
 
     useEffect(() => {
         const token = localStorage.getItem('token')
-        axios.get(`http://localhost:9000/api/friends` , {
-            headers: {
-                authorization: token
-            }
-        })
+        axiosWithAuth().get(`/friends`)
             .then(res => {
                setFriends(res.data)
             })
