@@ -1,4 +1,5 @@
 import axios from "axios";
+import axiosWithAuth from "../utils/axiosWithAuth";
 import React, { useEffect, useState } from "react";
 
 const FriendsList = () => {
