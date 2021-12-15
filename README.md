@@ -72,9 +72,9 @@ Each friend object has the format:
 * [x ] Use your protected route to restrict access to your `/friends` and `/friends/add` routes.
 
 ### Task 3: Stretch goals
-- [ ] Add in a modularized way to access protected endpoints using axiosWithAuth.
-- [ ] Add in a protected page and route that allows shows an information friends information. Use url params to get the id for this friend.
-- [ ] Style as you wish.
+- [x ] Add in a modularized way to access protected endpoints using axiosWithAuth.
+- [x ] Add in a protected page and route that allows shows an information friends information. Use url params to get the id for this friend.
+- [x ] Style as you wish.
 
 ### Submission Format
 - [x ] If this is your first time connecting a submission, authorize your github account within the codegrade assignment.
